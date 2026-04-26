@@ -1,0 +1,213 @@
+{
+  "clinic": {
+    "name": "Sunrise Family Clinic",
+    "address": "Plot 14, MG Road, Pune 411001",
+    "phone": "+91 98765 43210",
+    "consultationFee": 500,
+    "followUpFee": 300,
+    "workingHours": "9:00 AM – 8:00 PM"
+  },
+  "users": [
+    { "id": "U-DOC-01", "name": "Dr. Rajesh Mehta", "role": "doctor", "specialty": "General Physician", "regNo": "MMC-44521", "loginLabel": "Login as Doctor" },
+    { "id": "U-REC-01", "name": "Priya Sharma", "role": "receptionist", "loginLabel": "Login as Receptionist" },
+    { "id": "U-NUR-01", "name": "Kavita Nair", "role": "nurse", "loginLabel": "Login as Nurse" },
+    { "id": "U-PHM-01", "name": "Rohit Patel", "role": "pharmacist", "loginLabel": "Login as Pharmacist" },
+    { "id": "U-ADM-01", "name": "Clinic Owner", "role": "admin", "loginLabel": "Login as Admin" }
+  ],
+  "patients": [
+    {
+      "id": "P-1001",
+      "name": "Arun Verma",
+      "gender": "M",
+      "dob": "1980-04-12",
+      "phone": "+91 98201 11122",
+      "address": "Kothrud, Pune",
+      "bloodGroup": "B+",
+      "allergies": ["Penicillin"],
+      "conditions": ["Type 2 Diabetes"],
+      "createdAt": "2024-09-10"
+    },
+    {
+      "id": "P-1002",
+      "name": "Sunita Desai",
+      "gender": "F",
+      "dob": "1993-07-22",
+      "phone": "+91 98201 22233",
+      "address": "Baner, Pune",
+      "bloodGroup": "O+",
+      "allergies": [],
+      "conditions": [],
+      "createdAt": "2025-12-01"
+    },
+    {
+      "id": "P-1003",
+      "name": "Mohan Joshi",
+      "gender": "M",
+      "dob": "1958-11-03",
+      "phone": "+91 98201 33344",
+      "address": "Aundh, Pune",
+      "bloodGroup": "A+",
+      "allergies": ["Sulfa drugs"],
+      "conditions": ["Hypertension", "Type 2 Diabetes"],
+      "createdAt": "2023-04-18"
+    },
+    {
+      "id": "P-1004",
+      "name": "Riya Shah",
+      "gender": "F",
+      "dob": "1997-02-14",
+      "phone": "+91 98201 44455",
+      "address": "Wakad, Pune",
+      "bloodGroup": "AB+",
+      "allergies": [],
+      "conditions": [],
+      "createdAt": "2026-04-20"
+    },
+    {
+      "id": "P-1005",
+      "name": "Prakash Nair",
+      "gender": "M",
+      "dob": "1970-08-30",
+      "phone": "+91 98201 55566",
+      "address": "Kharadi, Pune",
+      "bloodGroup": "O-",
+      "allergies": ["Aspirin"],
+      "conditions": ["Asthma"],
+      "createdAt": "2024-12-12"
+    }
+  ],
+  "vitals": [
+    { "patientId": "P-1001", "date": "2026-04-26", "bp": "138/88", "temp": "98.4", "weight": 78, "pulse": 84, "spo2": 98 },
+    { "patientId": "P-1003", "date": "2026-04-26", "bp": "146/92", "temp": "98.6", "weight": 71, "pulse": 78, "spo2": 96 },
+    { "patientId": "P-1001", "date": "2026-02-14", "bp": "134/86", "temp": "98.2", "weight": 80, "pulse": 82, "spo2": 98 },
+    { "patientId": "P-1003", "date": "2026-01-20", "bp": "150/94", "temp": "98.7", "weight": 72, "pulse": 80, "spo2": 96 }
+  ],
+  "visits": [
+    { "id": "V-501", "patientId": "P-1001", "doctorId": "U-DOC-01", "date": "2026-02-14", "diagnosis": "Diabetes follow-up — stable", "complaint": "Routine check-up", "prescriptionId": "RX-301" },
+    { "id": "V-502", "patientId": "P-1003", "doctorId": "U-DOC-01", "date": "2026-01-20", "diagnosis": "Hypertension — adjusted medication", "complaint": "Headache, dizziness", "prescriptionId": "RX-302" },
+    { "id": "V-503", "patientId": "P-1005", "doctorId": "U-DOC-01", "date": "2026-03-08", "diagnosis": "Asthma exacerbation — mild", "complaint": "Wheezing, cough at night", "prescriptionId": "RX-303" },
+    { "id": "V-504", "patientId": "P-1001", "doctorId": "U-DOC-01", "date": "2025-11-02", "diagnosis": "Diabetes — initial assessment", "complaint": "Increased thirst, fatigue", "prescriptionId": "RX-304" }
+  ],
+  "appointments": [
+    { "id": "A-9001", "patientId": "P-1001", "doctorId": "U-DOC-01", "date": "2026-04-26", "slot": "09:30", "reason": "Diabetes follow-up", "status": "waiting", "type": "scheduled", "checkInAt": "2026-04-26T09:25" },
+    { "id": "A-9002", "patientId": "P-1003", "doctorId": "U-DOC-01", "date": "2026-04-26", "slot": "10:00", "reason": "BP check + medication review", "status": "in-consultation", "type": "scheduled", "checkInAt": "2026-04-26T09:55" },
+    { "id": "A-9003", "patientId": "P-1002", "doctorId": "U-DOC-01", "date": "2026-04-26", "slot": "10:30", "reason": "Sore throat, fever", "status": "scheduled", "type": "scheduled" },
+    { "id": "A-9004", "patientId": "P-1005", "doctorId": "U-DOC-01", "date": "2026-04-26", "slot": "11:00", "reason": "Inhaler refill", "status": "scheduled", "type": "scheduled" },
+    { "id": "A-9005", "patientId": "P-1004", "doctorId": "U-DOC-01", "date": "2026-04-26", "slot": "Walk-in", "reason": "Stomach pain", "status": "waiting", "type": "walkin", "checkInAt": "2026-04-26T10:10" },
+    { "id": "A-8990", "patientId": "P-1003", "doctorId": "U-DOC-01", "date": "2026-04-26", "slot": "08:30", "reason": "Routine BP", "status": "completed", "type": "scheduled", "checkInAt": "2026-04-26T08:25" }
+  ],
+  "medicines": [
+    { "id": "M-001", "name": "Metformin 500mg", "category": "Antidiabetic", "form": "Tablet" },
+    { "id": "M-002", "name": "Amlodipine 5mg", "category": "Antihypertensive", "form": "Tablet" },
+    { "id": "M-003", "name": "Telmisartan 40mg", "category": "Antihypertensive", "form": "Tablet" },
+    { "id": "M-004", "name": "Salbutamol Inhaler", "category": "Bronchodilator", "form": "Inhaler" },
+    { "id": "M-005", "name": "Paracetamol 650mg", "category": "Analgesic", "form": "Tablet" },
+    { "id": "M-006", "name": "Azithromycin 500mg", "category": "Antibiotic", "form": "Tablet" },
+    { "id": "M-007", "name": "Cetirizine 10mg", "category": "Antihistamine", "form": "Tablet" },
+    { "id": "M-008", "name": "Pantoprazole 40mg", "category": "PPI", "form": "Tablet" },
+    { "id": "M-009", "name": "Ondansetron 4mg", "category": "Antiemetic", "form": "Tablet" },
+    { "id": "M-010", "name": "Cefixime 200mg", "category": "Antibiotic", "form": "Tablet" },
+    { "id": "M-011", "name": "Glimepiride 2mg", "category": "Antidiabetic", "form": "Tablet" },
+    { "id": "M-012", "name": "Atorvastatin 10mg", "category": "Statin", "form": "Tablet" },
+    { "id": "M-013", "name": "Aspirin 75mg", "category": "Antiplatelet", "form": "Tablet" },
+    { "id": "M-014", "name": "Levocetirizine 5mg", "category": "Antihistamine", "form": "Tablet" },
+    { "id": "M-015", "name": "Domperidone 10mg", "category": "Antiemetic", "form": "Tablet" }
+  ],
+  "prescriptions": [
+    {
+      "id": "RX-301",
+      "visitId": "V-501",
+      "patientId": "P-1001",
+      "doctorId": "U-DOC-01",
+      "date": "2026-02-14",
+      "items": [
+        { "medicineId": "M-001", "name": "Metformin 500mg", "dosage": "1 tab", "frequency": "Twice daily", "duration": "30 days", "instructions": "After meals" },
+        { "medicineId": "M-013", "name": "Aspirin 75mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "30 days", "instructions": "After breakfast" }
+      ],
+      "dispensed": true
+    },
+    {
+      "id": "RX-302",
+      "visitId": "V-502",
+      "patientId": "P-1003",
+      "doctorId": "U-DOC-01",
+      "date": "2026-01-20",
+      "items": [
+        { "medicineId": "M-002", "name": "Amlodipine 5mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "30 days", "instructions": "Morning" },
+        { "medicineId": "M-001", "name": "Metformin 500mg", "dosage": "1 tab", "frequency": "Twice daily", "duration": "30 days", "instructions": "After meals" }
+      ],
+      "dispensed": true
+    },
+    {
+      "id": "RX-303",
+      "visitId": "V-503",
+      "patientId": "P-1005",
+      "doctorId": "U-DOC-01",
+      "date": "2026-03-08",
+      "items": [
+        { "medicineId": "M-004", "name": "Salbutamol Inhaler", "dosage": "2 puffs", "frequency": "As needed", "duration": "1 month", "instructions": "Use during wheezing" }
+      ],
+      "dispensed": true
+    },
+    {
+      "id": "RX-304",
+      "visitId": "V-504",
+      "patientId": "P-1001",
+      "doctorId": "U-DOC-01",
+      "date": "2025-11-02",
+      "items": [
+        { "medicineId": "M-001", "name": "Metformin 500mg", "dosage": "1 tab", "frequency": "Twice daily", "duration": "30 days", "instructions": "After meals" }
+      ],
+      "dispensed": true
+    },
+    {
+      "id": "RX-310",
+      "visitId": null,
+      "patientId": "P-1003",
+      "doctorId": "U-DOC-01",
+      "date": "2026-04-26",
+      "items": [
+        { "medicineId": "M-002", "name": "Amlodipine 5mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "30 days", "instructions": "Morning, after breakfast" },
+        { "medicineId": "M-012", "name": "Atorvastatin 10mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "30 days", "instructions": "Night, after dinner" }
+      ],
+      "dispensed": false
+    }
+  ],
+  "templates": [
+    {
+      "id": "T-01",
+      "name": "Common Cold",
+      "doctorId": "U-DOC-01",
+      "lastUsed": "2026-04-12",
+      "items": [
+        { "name": "Paracetamol 650mg", "dosage": "1 tab", "frequency": "Three times daily", "duration": "3 days", "instructions": "If fever > 100°F" },
+        { "name": "Cetirizine 10mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "5 days", "instructions": "At night" }
+      ]
+    },
+    {
+      "id": "T-02",
+      "name": "Diabetes Follow-up",
+      "doctorId": "U-DOC-01",
+      "lastUsed": "2026-02-14",
+      "items": [
+        { "name": "Metformin 500mg", "dosage": "1 tab", "frequency": "Twice daily", "duration": "30 days", "instructions": "After meals" },
+        { "name": "Glimepiride 2mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "30 days", "instructions": "Before breakfast" }
+      ]
+    },
+    {
+      "id": "T-03",
+      "name": "Acidity / GERD",
+      "doctorId": "U-DOC-01",
+      "lastUsed": "2026-04-08",
+      "items": [
+        { "name": "Pantoprazole 40mg", "dosage": "1 tab", "frequency": "Once daily", "duration": "14 days", "instructions": "Empty stomach, morning" },
+        { "name": "Domperidone 10mg", "dosage": "1 tab", "frequency": "Three times daily", "duration": "7 days", "instructions": "Before meals" }
+      ]
+    }
+  ],
+  "invoices": [
+    { "id": "INV-7001", "patientId": "P-1003", "appointmentId": "A-8990", "date": "2026-04-26", "items": [{ "label": "Consultation", "amount": 500 }], "total": 500, "paymentMode": "UPI", "status": "paid" },
+    { "id": "INV-7002", "patientId": "P-1002", "appointmentId": null, "date": "2026-04-24", "items": [{ "label": "Consultation", "amount": 500 }, { "label": "Dressing", "amount": 200 }], "total": 700, "paymentMode": "Cash", "status": "paid" },
+    { "id": "INV-7003", "patientId": "P-1005", "appointmentId": null, "date": "2026-04-23", "items": [{ "label": "Consultation", "amount": 500 }], "total": 500, "paymentMode": null, "status": "pending" }
+  ]
+}
